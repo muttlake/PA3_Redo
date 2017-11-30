@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWU-l6-16e">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Filter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise7Team1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="PrY-Cc-YNX">
+                                <rect key="frame" x="16" y="91" width="343" height="233.5"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jOk-DA-ezx">
+                                <rect key="frame" x="22" y="346" width="337" height="29"/>
+                                <segments>
+                                    <segment title="Original"/>
+                                    <segment title="Noir"/>
+                                    <segment title="Blur"/>
+                                    <segment title="Sepia"/>
+                                    <segment title="Vintage"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="kim-6O-qvO"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIA-T8-vZk">
+                                <rect key="frame" x="148" y="382" width="79" height="30"/>
+                                <state key="normal" title="Save Image"/>
+                                <connections>
+                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHe-Cv-c7q"/>
+                                </connections>
+                            </button>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xwx-oL-w6Q">
+                                <rect key="frame" x="16" y="382" width="118" height="31"/>
+                            </slider>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-xg-Q4j">
+                                <rect key="frame" x="246" y="383" width="98" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jOk-DA-ezx" secondAttribute="trailing" constant="16" id="Apn-wp-aAL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PrY-Cc-YNX" secondAttribute="trailing" constant="16" id="BlY-qU-GWS"/>
+                            <constraint firstItem="qfh-xg-Q4j" firstAttribute="top" secondItem="jOk-DA-ezx" secondAttribute="bottom" constant="9" id="COR-rk-nvh"/>
+                            <constraint firstItem="PrY-Cc-YNX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="NDN-cg-Ee5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="55"/>
+                            </constraint>
+                            <constraint firstItem="PrY-Cc-YNX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="RrG-j8-RCN"/>
+                            <constraint firstItem="Xwx-oL-w6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="XLr-EA-1Vl"/>
+                            <constraint firstItem="AIA-T8-vZk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xyb-0c-w6l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qfh-xg-Q4j" secondAttribute="trailing" constant="33" id="Zky-HS-DtP"/>
+                            <constraint firstItem="AIA-T8-vZk" firstAttribute="leading" secondItem="Xwx-oL-w6Q" secondAttribute="trailing" constant="16" id="jPC-xK-Prc"/>
+                            <constraint firstItem="AIA-T8-vZk" firstAttribute="top" secondItem="jOk-DA-ezx" secondAttribute="bottom" constant="8" id="jWB-Yz-r8L"/>
+                            <constraint firstItem="PrY-Cc-YNX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p0t-CL-pDX"/>
+                            <constraint firstItem="qfh-xg-Q4j" firstAttribute="leading" secondItem="AIA-T8-vZk" secondAttribute="trailing" constant="21" id="vJ0-cB-ftl"/>
+                            <constraint firstItem="Xwx-oL-w6Q" firstAttribute="top" secondItem="jOk-DA-ezx" secondAttribute="bottom" constant="8" id="vh6-ph-APg"/>
+                            <constraint firstItem="jOk-DA-ezx" firstAttribute="top" secondItem="PrY-Cc-YNX" secondAttribute="bottom" constant="21.5" id="wKq-Uy-Rb7"/>
+                            <constraint firstItem="jOk-DA-ezx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="xfS-3W-nPq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo Filter" id="Js6-e8-e8j"/>
+                    <connections>
+                        <outlet property="angle" destination="qfh-xg-Q4j" id="Xm4-8y-ic4"/>
+                        <outlet property="img" destination="PrY-Cc-YNX" id="88D-3g-63x"/>
+                        <outlet property="radius" destination="Xwx-oL-w6Q" id="roO-10-kLS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="31.934032983508249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ea2-Li-rQY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LWU-l6-16e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2K1-br-eqI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wev-dR-byH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvP-Xe-sL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="-24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flower" width="800" height="600"/>
+    </resources>
+</document>

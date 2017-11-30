@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ey7-sb-fz7">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Filter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ex7_REDO_PA3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-z3-Evw">
+                                <rect key="frame" x="248" y="25" width="240" height="364"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="NeN-pq-9gO">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CXd-q0-MrB"/>
+                                            <constraint firstAttribute="width" constant="240" id="HOo-df-Tk1"/>
+                                            <constraint firstAttribute="height" constant="240" id="UBu-Z9-cFq"/>
+                                            <constraint firstAttribute="width" constant="280" id="YKh-jL-C1s"/>
+                                            <constraint firstAttribute="height" constant="180" id="ZQB-h4-EMd"/>
+                                            <constraint firstAttribute="height" constant="100" id="d7O-a4-VLq"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="CXd-q0-MrB"/>
+                                                <exclude reference="HOo-df-Tk1"/>
+                                                <exclude reference="UBu-Z9-cFq"/>
+                                                <exclude reference="YKh-jL-C1s"/>
+                                                <exclude reference="ZQB-h4-EMd"/>
+                                                <exclude reference="d7O-a4-VLq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="CXd-q0-MrB"/>
+                                                <include reference="d7O-a4-VLq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="HOo-df-Tk1"/>
+                                                <include reference="UBu-Z9-cFq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="YKh-jL-C1s"/>
+                                                <include reference="ZQB-h4-EMd"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFJ-FE-rLc">
+                                        <rect key="frame" x="0.0" y="252" width="240" height="28"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-DI-SFa">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="29"/>
+                                                <segments>
+                                                    <segment title="Original"/>
+                                                    <segment title="Noir"/>
+                                                    <segment title="Blur"/>
+                                                    <segment title="Sepia"/>
+                                                    <segment title="Vintage"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="filterSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="6aj-2r-dYo"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81r-nq-hpn">
+                                        <rect key="frame" x="0.0" y="292" width="240" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="e9N-I6-LdV"/>
+                                            <constraint firstAttribute="height" constant="30" id="ztl-bU-Otb"/>
+                                        </constraints>
+                                        <state key="normal" title="Save Image"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="e9N-I6-LdV"/>
+                                                <exclude reference="ztl-bU-Otb"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="e9N-I6-LdV"/>
+                                                <include reference="ztl-bU-Otb"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="SaveImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTZ-l3-ox1"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="15u-EV-Wdr">
+                                        <rect key="frame" x="-2" y="334" width="244" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="GAW-wd-Fcs"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="BlurSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="sJG-WG-ars"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="jtK-3f-TCF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jtK-3f-TCF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical" spacing="18">
+                                    <mask key="constraints">
+                                        <include reference="jtK-3f-TCF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical" spacing="12"/>
+                                <variation key="heightClass=regular-widthClass=compact" alignment="center" axis="vertical"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ro-PH-4tv"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="69A-9x-LrD"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SNb-Z5-92Z"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="chX-SG-lb6"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ciH-Hy-lUS"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="et1-Yx-5Cz"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hiw-Wi-Roz"/>
+                            <constraint firstItem="fSo-z3-Evw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nkC-IO-LYT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2ro-PH-4tv"/>
+                                <exclude reference="69A-9x-LrD"/>
+                                <exclude reference="SNb-Z5-92Z"/>
+                                <exclude reference="chX-SG-lb6"/>
+                                <exclude reference="ciH-Hy-lUS"/>
+                                <exclude reference="et1-Yx-5Cz"/>
+                                <exclude reference="hiw-Wi-Roz"/>
+                                <exclude reference="nkC-IO-LYT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2ro-PH-4tv"/>
+                                <include reference="SNb-Z5-92Z"/>
+                                <include reference="chX-SG-lb6"/>
+                                <include reference="nkC-IO-LYT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="69A-9x-LrD"/>
+                                <include reference="hiw-Wi-Roz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="ciH-Hy-lUS"/>
+                                <include reference="et1-Yx-5Cz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo Filter" id="UGg-uq-DVN"/>
+                    <connections>
+                        <outlet property="BlurSliderOutlet" destination="15u-EV-Wdr" id="gMf-eB-QFS"/>
+                        <outlet property="mainImage" destination="NeN-pq-9gO" id="Uc7-bm-1p3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455.625" y="116.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tq2-Y0-Dv1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ey7-sb-fz7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HZ0-wb-PNt">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dhX-yr-HEM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tn7-xa-Em3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flower" width="800" height="600"/>
+    </resources>
+</document>
